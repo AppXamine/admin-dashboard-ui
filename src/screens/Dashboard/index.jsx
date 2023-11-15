@@ -67,7 +67,7 @@ function Dashboard() {
         </div>
 
 
-        <div className="w-full max-w-[500px] text-center pt-[10px]  pb-[10px] h-auto rounded-[10px] bg-[#fff] " style={{ boxShadow: "1px 1px .4rem #d3d3d3" }}>
+        <div className="w-full max-w-[500px] text-center pt-[10px]  pb-[10px] h-auto rounded-[10px] bg-[#fff]  ml-[50px]" style={{ boxShadow: "1px 1px .4rem #d3d3d3" }}>
 
           <div className="w-[400px] h-[200px] mb-[20px] rounded-[10px] ml-[50px] bg-gradient-to-r from-[#141727] to-[#3a416f]">
             <VerticalChart />

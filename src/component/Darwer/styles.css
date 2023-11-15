@@ -1,0 +1,16 @@
+.listItems:hover{
+    background-color: #fff;
+    box-shadow: 1px 1px .4rem #aeaeae;
+}
+
+.listItems:hover div{
+background-color: #17c1e8;
+color: #aeaeae;
+}
+.homeIcon{
+    fill: #344767;
+}
+
+.listItems:hover .homeIcon{
+    fill: #fff !important;
+}
