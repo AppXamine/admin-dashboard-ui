@@ -1,0 +1,357 @@
+.formContainer {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    background: #eee;
+    border: 3px solid #011635;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.firstInput {
+    width: 100%;
+    height: auto;
+    /* margin: 10px; */
+    text-align: center;
+    padding: 10px;
+    /* background: red; */
+}
+
+.fromLabel {
+    width: 100%;
+    height: auto;
+    /* background: green; */
+    padding-left: 10px;
+    margin-bottom: 2px;
+}
+
+.fromLabel p {
+    font-size: 11px;
+    color: #011635;
+    font-weight: bold;
+    letter-spacing: -0.025rem;
+}
+
+.formInputStyle {
+    width: 100%;
+    max-width: 500px;
+    /* padding: 2px; */
+    padding-left: 7px;
+    color: #011635;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* background: linear-gradient(#011635, #00337c, #011635); */
+
+.formBtn {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+
+.btnStyle {
+    width: 350px;
+    height: auto;
+    background-color: #002760;
+    padding: 10px 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .8);
+}
+
+.btnStyle:hover {
+    background-color: #00337c;
+}
+
+.btnStyle p {
+    color: #dec664;
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: -0.025rem;
+}
+
+.packageContainer {
+    width: 98%;
+    margin: 80px auto 10px auto;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #eee;
+}
+
+.packageBlock {
+    width: 50%;
+    height: auto;
+    padding: 15px;
+    /* background-color: rgb(199, 219, 255); */
+}
+
+.packageBlockCard {
+    width: 50%;
+    min-width: 350px;
+    height: auto;
+    padding: 10px;
+    padding-left: 30px;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+}
+
+.packageBLockImg {
+    max-width: 450px;
+    min-width: 350px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 10px;
+    /* margin: 0 auto; */
+    background-image: url("https://img.freepik.com/free-vector/flat-arabic-pattern-background_79603-1826.jpg?w=996&t=st=1703139828~exp=1703140428~hmac=b04175947430940fe116e231dc2d2a638bdfa2172b7d684846c82542cdd6ae7e");
+    background-size: 100%;
+    border: 5px solid #473d28;
+    box-shadow: 1px 1px .4rem #473d28;
+    border-radius: 10px;
+}
+
+.packageBorder {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #473d28;
+}
+
+.packageHeader {
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.packageHeaderHeading {
+    width: 100%;
+    /* background: red; */
+}
+
+.packageSideImage {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    border: 2px solid #473d28;
+}
+
+.packageSideImage img {
+    width: 100%;
+    height: 100%;
+}
+
+.packageHeaderHeading h1 {
+    margin: 0;
+    font-weight: bold;
+    color: #473d28;
+    font-size: 20px;
+    width: fit-content;
+    letter-spacing: -0.025rem;
+}
+
+.packageHeaderHeading h2 {
+    margin: 0;
+    color: #473d28;
+    font-size: 18px;
+    width: fit-content;
+    letter-spacing: -0.025rem;
+}
+
+.packageHeaderHeading p {
+    margin: 0;
+    color: #473d28;
+    font-size: 10px;
+    font-weight: bold;
+    width: fit-content;
+    letter-spacing: -0.025rem;
+}
+
+.packageTableBorder {
+    width: 97%;
+    margin: 20px auto;
+    height: auto;
+    border: 2px solid #473d28;
+    display: flex;
+
+
+}
+
+.packageTableBorder2 {
+    width: 97%;
+    margin: 20px auto;
+    height: auto;
+    border: 2px solid #473d28;
+
+}
+
+.packageTable {
+    width: 33.4%;
+    height: auto;
+    /* background-color: #e8e0d5; */
+    border: 2px solid #473d28;
+}
+
+.tableHeading {
+    width: 100%;
+    height: auto;
+    padding-left: 5px;
+    margin: 5px auto 10px auto;
+}
+
+.tableHeading h1 {
+    color: #473d28;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.025rem;
+}
+
+.tableHeading p {
+    margin: 0;
+    color: #473d28;
+    font-size: 15px;
+    letter-spacing: -0.025rem;
+    font-weight: 400;
+}
+
+.text-right {
+    text-align: right !important;
+    padding-right: 5px;
+}
+
+.tableHeadingCenter {
+    width: 100%;
+    height: auto;
+    margin: 5px auto 10px auto;
+    text-align: center;
+}
+
+.tableHeadingCenter h1 {
+    color: #473d28;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -0.025rem;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.tableHeading2 {
+    width: 100%;
+    height: auto;
+    padding-left: 5px;
+    margin: 5px auto 10px auto;
+}
+
+.tableHeading2 h1 {
+    color: #473d28;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.025rem;
+}
+
+.tableHeading2 p {
+    margin: 0;
+    color: #473d28;
+    font-size: 10px;
+    font-weight: bold !important;
+    letter-spacing: -0.025rem;
+    font-weight: 400;
+}
+
+.tableHeader {
+    width: 100%;
+    height: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg-yello {
+    background-color: #bba168;
+}
+
+.bg-offWhite {
+    background-color: #e8e0d5;
+
+}
+
+.tableHeadValue {
+    width: 33.3%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableHeadValue h1 {
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.tableItems {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.tableItemsValue {
+    width: 33.3%;
+    height: auto;
+}
+
+.tableItemsValue p {
+    margin: 0;
+    color: #473d28;
+    font-size: 10px;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.renderContainer {
+    margin: 10px auto 20px auto;
+    width: 98%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 3px solid #002760;
+}
+
+.renderContainer h1 {
+    font-size: 2.2rem;
+    color: #002760;
+    font-weight: 700;
+}
+.renderContainer h2 {
+    font-size: 20px;
+    color: #002760;
+    font-weight: 700;
+}
+
+.cardSection{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

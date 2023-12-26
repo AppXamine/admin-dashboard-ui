@@ -1,0 +1,73 @@
+.modaldeleteConatiner {
+    width: 100%;
+    height: auto;
+}
+
+.ant-modal-content,
+.ant-modal-title {
+    background-color: #eee !important;
+}
+
+.modaldeleteConatiner p {
+    letter-spacing: -0.025rem;
+    color: red;
+}
+
+.modalEditBody {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.uploadercontainer{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.inputStyles {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    height: 30px;
+}
+
+.labelStyles {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.labelStyles P {
+    color: #000;
+    margin: 5px;
+    font-weight: 600;
+}
+
+.modalFooter {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.EditBtn {
+    width: 250px;
+    height: auto;
+    background-color: #002760;
+    padding: 7px 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .8);
+}
+
+.EditBtn:hover {
+    background-color: #00337c;
+}
+
+.EditBtn p {
+    color: #dec664;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: -0.025rem;
+}

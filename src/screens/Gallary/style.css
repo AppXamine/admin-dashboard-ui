@@ -1,0 +1,187 @@
+.gallaryContainer {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    position: relative;
+    margin: 100px auto 20px auto;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 1px .4rem #d3d3d3;
+}
+
+
+
+.galleryInputs {
+    width: 100%;
+    height: auto;
+}
+
+.galleryInputHeading {
+    width: 100%;
+
+    height: auto;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #011635;
+    margin-bottom: 10px;
+}
+
+.galleryInputHeading h5 {
+    color: #011635;
+    letter-spacing: -0.025rem;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+.inputGallery {
+    width: 100%;
+    max-width: 1100px;
+    min-width: 350px;
+    margin: 0 auto;
+    height: 40px;
+}
+
+.gallerybtn {
+    width: 100%;
+    max-width: 1100px;
+    min-width: 350px;
+    margin: 15px auto;
+    height: 40px;
+    text-align: center;
+}
+
+.uploadContainer {
+    width: fit-content;
+    max-width: 1150px;
+    flex-wrap: wrap;
+    height: auto;
+    /* padding: 10px; */
+    background-color: #fff;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+}
+
+
+
+.galleryInputs {
+    width: 100%;
+    height: auto;
+}
+
+.galleryInputHeading {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #011635;
+    margin-bottom: 10px;
+}
+
+.galleryInputHeading h5 {
+    color: #011635;
+    letter-spacing: -0.025rem;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.galleryInput {
+    width: 100%;
+    height: auto;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ant-form-item {
+    margin-bottom: 0 !important;
+}
+
+
+.inputUploadGallery {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 !important;
+    height: 30px;
+}
+
+.gallerybtn {
+    width: 100%;
+    max-width: 1100px;
+    min-width: 350px;
+    margin: 15px auto;
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.uploadImageUi {
+    width: 220px;
+    min-width: 230px;
+    height: auto;
+    padding: 10px 10px 20px 10px;
+    margin: 15px 20px;
+    border-radius: 5px;
+    background-color: #eee;
+    box-shadow: 1px 1px 1rem #01163561;
+}
+
+
+.imageUploadContainer {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.imageUploadContainer img {
+    width: 100%;
+    height: 100%    ;
+}
+
+.uploadInputs {
+    width: 100%;
+    height: auto;
+}
+
+
+.galleryUploadInput {
+    width: 100%;
+    height: auto;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.labelUploadGallery {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0px auto;
+
+}
+
+.labelUploadGallery P {
+    color: #000;
+    margin: 5px 2.5px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.labelUploadGallery span {
+    color: #000;
+    margin-left: 3px;
+    font-size: 8px;
+    font-weight: 400;
+}

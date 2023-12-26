@@ -9,43 +9,13 @@ import ProgressBar from "../../component/ProgressBar/index.jsx";
 
 function Dashboard() {
 
-  const [images, setImages] = useState("");
 
-  const uploadFile = (file) => {
-    return new Promise((resolve, reject) => {
-      const file = document.getElementById("file")
-
-      const mountainsRef = ref(storage, `images/${file.files[0].name}`);
-      const uploadTask = uploadBytesResumable(mountainsRef, file.files[0]);
-      uploadTask.on('state_changed',
-        (snapshot) => {
-          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          console.log('Upload is ' + progress + '% done');
-          switch (snapshot.state) {
-            case 'paused':
-              console.log('Upload is paused');
-              break;
-            case 'running':
-              console.log('Upload is running');
-              break;
-          }
-        },
-        (error) => {
-          console.log(error)
-        },
-        () => {
-
-          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-            resolve(downloadURL);
-            setImages(downloadURL)
-          });
-        }
-      );
-    })
-  }
-
+ 
   return (
     <>
+
+
+   
       <div className="w-full h-[100vh]">
         <Navbar />
         <div className="w-full h-auto  max-w-[1200px] mr-auto ml-auto mt-[40px]">

@@ -1,16 +1,136 @@
-.listItems:hover{
-    background-color: #fff;
-    box-shadow: 1px 1px .4rem #aeaeae;
+.navMenu {
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
 }
 
-.listItems:hover div{
-background-color: #17c1e8;
-color: #aeaeae;
+.drawerwidth {
+    min-height: 100vh;
+    padding-top: 55px !important;
 }
-.homeIcon{
+
+.drawerHeader {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.drawerlogoContainer {
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    align-items: flex-end;
+
+}
+
+.drawerlogo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(#011635, #00337c, #011635);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .8);
+    padding: 5px;
+    margin: 0 auto;
+    height: auto;
+    cursor: pointer;
+}
+
+.drawerlogo img {
+    width: 100%;
+}
+
+.drawerlogoContainer h1 {
+    color: #00337c;
+    font-weight: 800;
+    font-family: serif;
+    font-size: 1.5rem;
+    letter-spacing: -0.025rem;
+}
+
+.crossIcon {
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.listItems {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.homeIcon {
     fill: #344767;
 }
 
-.listItems:hover .homeIcon{
-    fill: #fff !important;
+.listItems div {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 1px 1px .3rem #aeaeae;
 }
+.listItems p{
+color: #344767;
+font-weight: 700;
+cursor: pointer;
+margin: 0;
+text-transform: capitalize!important;
+}
+
+.listItems:hover {
+    background-color: #00337c;
+    box-shadow: 1px 1px .4rem #aeaeae;
+}
+
+.listItems:hover div {
+    background-color: #dec664;
+    color: #aeaeae;
+}
+
+.listItems:hover p{
+    color: #dec664;
+    font-weight: 700;
+}
+
+.sideBarHeading{
+width: 100%;
+height: auto;
+color: #011635;
+}
+
+.sideBarHeading h1{
+    color: #011635;
+    margin: 40px 10px 20px 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.sideActive{
+    background-color: #00337c!important;
+}
+
+.sideActive p{
+    color: #dec664!important;
+}
+.sideActive div{
+    background-color: #dec664!important;
+}
+
+

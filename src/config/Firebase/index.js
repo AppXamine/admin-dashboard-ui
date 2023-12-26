@@ -1,17 +1,17 @@
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword} from "firebase/auth";
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword  } from "firebase/auth";
 import { getStorage, ref, uploadBytes, uploadBytesResumable, getDownloadURL, deleteObject } from "firebase/storage";
-
+import { getFirestore, collection, addDoc, query, where, onSnapshot,doc, deleteDoc,updateDoc } from "firebase/firestore";
 const firebaseConfig = {
-  apiKey: "AIzaSyCZQraVa6GQ08eq553-BlgYWj5pj0CRuZ4",
-  authDomain: "officeproject-e1d30.firebaseapp.com",
-  projectId: "officeproject-e1d30",
-  storageBucket: "officeproject-e1d30.appspot.com",
-  messagingSenderId: "671693441805",
-  appId: "1:671693441805:web:169d828e78db9cc6577e44",
-  measurementId: "G-9V81DDFFZS"
+  apiKey: "AIzaSyBl5DFQGotvMIjfLtKe5fxneaukVL-gQKU",
+  authDomain: "test-project-login-signup.firebaseapp.com",
+  projectId: "test-project-login-signup",
+  storageBucket: "test-project-login-signup.appspot.com",
+  messagingSenderId: "631094519016",
+  appId: "1:631094519016:web:b9c0e7d3d9b4666988955d",
+  measurementId: "G-BF6S9S8CRG"
 };
 
 
@@ -19,6 +19,14 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth();
 const analytics = getAnalytics(app);
+const db = getFirestore(app);
 const storage = getStorage(app);
 
-export {auth , onAuthStateChanged , createUserWithEmailAndPassword ,storage,getStorage, ref, uploadBytes, uploadBytesResumable, getDownloadURL, deleteObject }
+export {
+  auth, onAuthStateChanged, signInWithEmailAndPassword ,
+  storage, getStorage, ref, uploadBytes, uploadBytesResumable,
+  getDownloadURL, deleteObject, collection,
+  addDoc, db, query, where, onSnapshot,
+  doc, deleteDoc,
+  updateDoc
+}

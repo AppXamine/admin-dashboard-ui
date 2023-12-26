@@ -1,0 +1,84 @@
+.navContainer {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #00337c;
+    ;
+}
+
+.logoContainer {
+    width: 100%;
+    height: auto;
+}
+
+.logoContainer h2 {
+    font-family: serif;
+    font-weight: bold;
+    letter-spacing: -0.025rem;
+    color: #ffff;
+    margin: 0;
+    margin-left: 10px;
+    line-height: 1;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px .4rem #525252;
+}
+
+.logoContainer p {
+    font-family: serif;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    line-height: 1;
+    color: #ffff;
+    margin: 0;
+    margin-left: 10px;
+    font-size: 15px;
+    text-shadow: 1px 1px .4rem #525252;
+}
+
+.navInputContainer {
+    width: 100%;
+    max-width: 190px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navInputContainer input {
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.logout {
+    width: fit-content;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logoutBtn {
+    width: 100%;
+    max-width: 550px !important;
+    background: rgb(172, 13, 13);
+    outline: none;
+    border: none;
+}
+.logoutBtn:hover{
+    background: rgb(134, 11, 11);
+    
+}
+
+.logoutBtn p {
+    color: #fff !important;
+    font-weight: 500;
+    margin: 0;
+
+}
