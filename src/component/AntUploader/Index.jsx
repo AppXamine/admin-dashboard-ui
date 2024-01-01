@@ -17,6 +17,7 @@ const AntDragger = ({ uploadFile }) => {
             }
             if (info.file.status === 'done') {
                 uploadFile(info.file.originFileObj)
+                console.log("info.fileList", info.fileList)
             } else if (info.file.status === 'error') {
                 uploadFile(info.file.originFileObj)
             }
@@ -28,7 +29,7 @@ const AntDragger = ({ uploadFile }) => {
     return (
         <Dragger
             accept="jpg"
-            listType="  "
+            showUploadList={false}
             {...props}>
             <p className="ant-upload-drag-icon UploadIcon">
                 <BiUpload fill="#011635" />

@@ -1,3 +1,15 @@
+import "./styles.css"
+import React from 'react'
+
+function PackageCard() {
+  return (
+    <div>packageCard</div>
+  )
+}
+
+
+
+
 function CardPrimary() {
     return (
         <>
@@ -123,4 +135,4 @@ function CardSecondary() {
 }
 
 
-export { CardPrimary, CardSecondary };
+export { CardPrimary, CardSecondary ,PackageCard};

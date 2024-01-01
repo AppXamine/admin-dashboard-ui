@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Button, Input, Form } from "antd";
 // import { storage, ref, uploadBytesResumable, getDownloadURL } from "../../config/Firebase/index.js"
 import { AntDragger } from "../../component/AntUploader/Index.jsx";
-import { AddData, uploadFile } from "../../config/Functions/index.js";
+import { AddData, uploadFile } from "../../config/Constant/index.js";
 import Spiner from "../../component/Spiner/index.jsx";
 import Navbar from "../../component/Navbar/index.jsx";
 

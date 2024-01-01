@@ -2,7 +2,7 @@ import "../style.css"
 import { useEffect, useState } from "react";
 import { collection, query, onSnapshot, db } from "../../../config/Firebase/index.js"
 import { Button, Input } from "antd";
-import { AddData } from "../../../config/Functions/index.js";
+import { AddData } from "../../../config/Constant/index.js";
 import Spiner from "../../../component/Spiner/index.jsx";
 import Navbar from "../../../component/Navbar/index.jsx";
 

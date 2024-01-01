@@ -2,36 +2,41 @@ import "../style.css"
 import { useEffect, useState } from "react";
 import { collection, query, onSnapshot, db } from "../../../config/Firebase/index.js"
 import { Button, Input } from "antd";
-import { AddData } from "../../../config/Functions/index.js";
+import { AddData } from "../../../config/Constant/index.js";
 import Spiner from "../../../component/Spiner/index.jsx";
 import Navbar from "../../../component/Navbar/index.jsx";
 
 
 function Hajj() {
     const [loading, setLoading] = useState(false)
-    const [year, setYear] = useState("____")
-    const [PQRate, setPQRate] = useState("_______")
-    const [duoBedRate, setDuoBedRate] = useState("_______")
-    const [threeBedRate, setThreeBedRate] = useState("______")
-    const [passValid, setPassValid] = useState("_____")
+    const [year, setYear] = useState("2023")
+    const [PQRate, setPQRate] = useState("1000000")
+    const [pkgStart, setPkgStart] = useState("32")
+    const [pkgEnd, setPkgEnd] = useState("34")
+    const [duoBedRate, setDuoBedRate] = useState("1000000")
+    const [threeBedRate, setThreeBedRate] = useState("1000000")
+    const [passValid, setPassValid] = useState("2023-12-14")
     const [data, setData] = useState([])
-    // console.log("setData=>",  passValid.replaceAll("-"," / "))
 
     const handleUploader = async () => {
         setLoading(true)
         const obj = {
             year,
             PQRate,
+            pkgStart,
+            pkgEnd,
             duoBedRate,
             threeBedRate,
             passValid
         }
         await AddData(obj, "hajj")
-        setYear("____")
-        setPQRate("_______")
-        setDuoBedRate("_______")
-        setThreeBedRate("_______")
-        setPassValid("_______")
+        setYear("2023")
+        setPQRate("1000000")
+        setPkgStart("32")
+        setPkgEnd("34")
+        setDuoBedRate("1000000")
+        setThreeBedRate("1000000")
+        setPassValid("2023-12-14")
         setLoading(false)
     }
 
@@ -58,56 +63,120 @@ function Hajj() {
                         <h1>Hajj Package Uploader</h1>
                     </div>
                     <div className="packageBlock">
-
                         <div className="formContainer">
 
-                            <div className="firstInput">
-                                <div className="fromLabel">
-                                    <p>Package Year</p>
-                                </div>
-                                <Input type="number" value={year} onChange={e => setYear(e.target.value)} className="formInputStyle" maxLength={4} />
-                            </div>
-                            <div className="firstInput">
-                                <div className="fromLabel">
-                                    <p> Days Package</p>
-                                </div>
-                                <Input type="date" className="formInputStyle" />
-                            </div>
-                            <div className="firstInput">
-                                <div className="fromLabel">
-                                    <p>Package Amount sharing basis without Qurbani</p>
-                                </div>
-                                <Input type="number" value={PQRate} onChange={e => setPQRate(e.target.value)} className="formInputStyle" />
-                            </div>
+                            {/* first row */}
 
-
-                            {/* <div className="firstInput">
-                                <div className="fromLabel">
-                                    <p>Departure Date</p>
+                            <div className="dividInputs">
+                                <div className="firstInput">
+                                    <div className="fromLabel">
+                                        <p>Package Year</p>
+                                    </div>
+                                    <Input
+                                        type="text"
+                                        placeholder=".i.e number"
+                                        value={year}
+                                        onChange={e => setYear(e.target.value)}
+                                        className="formInputStyle"
+                                        maxLength={4} />
                                 </div>
-                                <Input type="date" className="formInputStyle" />
-                            </div> */}
-
-
-                            {/* <div className="firstInput">
-                                <div className="fromLabel">
-                                    <p>Arrival Date</p>
+                                <div className="firstInput">
+                                    <div className="fromLabel">
+                                        <p> Package Amount without Qurbani</p>
+                                    </div>
+                                    <Input
+                                        type="text"
+                                        placeholder=".i.e number"
+                                        className="formInputStyle"
+                                        maxLength={6}
+                                        value={PQRate}
+                                        onChange={e => setPQRate(e.target.value)} />
                                 </div>
-                                <Input type="date" className="formInputStyle" />
-                            </div> */}
-                            <div className="firstInput">
-                                <div className="fromLabel">
-                                    <p>Double Bed</p>
-                                </div>
-                                <Input type="number" value={duoBedRate} onChange={e => setDuoBedRate(e.target.value)} className="formInputStyle" />
                             </div>
 
-                            <div className="firstInput">
-                                <div className="fromLabel">
-                                    <p>Triple Bed</p>
+                            {/* second row */}
+
+                            <div className="dividInputs">
+                                <div className="firstInput">
+                                    <div className="fromLabel">
+                                        <p>Package Start Date <span>( i.e number )</span></p>
+                                    </div>
+                                    <Input
+                                        type="text"
+                                        placeholder=".i.e number"
+                                        onChange={e => setPkgStart(e.target.value)}
+                                        value={pkgStart}
+                                        className="formInputStyle"
+                                        maxLength={2} />
                                 </div>
-                                <Input type="number" value={threeBedRate} onChange={e => setThreeBedRate(e.target.value)} className="formInputStyle" />
+
+                                <div className="firstInput">
+                                    <div className="fromLabel">
+                                        <p>Package End Date  <span>( i.e number )</span></p>
+                                    </div>
+                                    <Input
+                                        type="text"
+                                        placeholder=".i.e number"
+                                        onChange={e => setPkgEnd(e.target.value)}
+                                        value={pkgEnd}
+                                        className="formInputStyle"
+                                        maxLength={2} />
+                                </div>
                             </div>
+
+                            {/* third row */}
+
+                            <div className="dividInputs">
+                                <div className="firstInput">
+                                    <div className="fromLabel">
+                                        <p>Departure Date</p>
+                                    </div>
+                                    <Input
+                                        type="text"
+                                        placeholder=".i.e number"
+                                        onChange={e => (e.target.value)}
+                                        className="formInputStyle"
+                                        maxLength={6} />
+                                </div>
+                                <div className="firstInput">
+                                    <div className="fromLabel">
+                                        <p>Arrival Date</p>
+                                    </div>
+                                    <Input
+                                        type="text"
+                                        placeholder=".i.e number"
+                                        onChange={e => (e.target.value)}
+                                        className="formInputStyle"
+                                        maxLength={6} />  </div>
+                            </div>
+
+                            {/* Forth row */}
+                            <div className="dividInputs">
+                                <div className="firstInput">
+                                    <div className="fromLabel">
+                                        <p>Double Bed Rate</p>
+                                    </div>
+                                    <Input
+                                        type="text"
+                                        placeholder=".i.e number"
+                                        onChange={e => setDuoBedRate(e.target.value)}
+                                        value={duoBedRate}
+                                        className="formInputStyle"
+                                        maxLength={6} />
+                                </div>
+                                <div className="firstInput">
+                                    <div className="fromLabel">
+                                        <p>Triple Bed Rate</p>
+                                    </div>
+                                    <Input
+                                        type="text"
+                                        placeholder=".i.e number"
+                                        onChange={e => setThreeBedRate(e.target.value)}
+                                        value={threeBedRate}
+                                        className="formInputStyle"
+                                        maxLength={6} />  </div>
+                            </div>
+
                             <div className="firstInput">
                                 <div className="fromLabel">
                                     <p>Passport Valid Date</p>
@@ -119,21 +188,21 @@ function Hajj() {
                                     {loading ?
                                         (<Spiner />)
                                         :
-                                        (<p>Login Admin</p>)
+                                        (<p>Package Upload</p>)
                                     }
                                 </Button>
                             </div>
-
-
                         </div>
                     </div>
+
+                    {/* side Card */}
                     <div className="packageBlockCard">
                         <div className="packageBLockImg">
                             <div className="packageBorder">
                                 <div className="packageHeader">
                                     <div className="packageHeaderHeading">
                                         <h1>Hajj Package {year}</h1>
-                                        <h2>32 to 34 Days Package</h2>
+                                        <h2>{pkgStart} to {pkgEnd} Days Package</h2>
                                         <h1>{PQRate}/-</h1>
                                         <p>Package Amount sharing basis without Qurbani</p>
                                     </div>
@@ -181,10 +250,7 @@ function Hajj() {
                                                 Sharing Basis</p>
                                         </div>
                                     </div>
-
-
                                 </div>
-
                                 <div className="packageTableBorder2">
                                     <div className="tableHeader bg-yello">
                                         <div className="tableHeadValue">
@@ -274,19 +340,20 @@ function Hajj() {
                         </div>
                     </div>
 
+                    {/* Render Area */}
                     <div className="renderContainer">
                         <h2>Package Uploaded</h2>
                     </div>
                     <div className="cardSection">
-                        {/* card reander here  */}
 
+                        {/* card reander here  */}
                         {data.map((value, index) =>
                             <div key={index} className="packageBLockImg">
                                 <div className="packageBorder">
                                     <div className="packageHeader">
                                         <div className="packageHeaderHeading">
                                             <h1>Hajj Package {value.year}</h1>
-                                            <h2>32 to 34 Days Package</h2>
+                                            <h2>{value.pkgStart} to {value.pkgEnd} Days Package</h2>
                                             <h1>{value.PQRate}/-</h1>
                                             <p>Package Amount sharing basis without Qurbani</p>
                                         </div>

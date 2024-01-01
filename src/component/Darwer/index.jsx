@@ -2,14 +2,14 @@ import "./styles.css";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdMenuOpen,MdMenu } from "react-icons/md";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Drawer } from "antd";
 import { AiOutlineClose } from "react-icons/ai";
 import { PiCertificateFill } from "react-icons/pi";
 import { FaNoteSticky } from "react-icons/fa6";
 import { MdDashboard } from "react-icons/md";
 import { LuGalleryHorizontalEnd } from "react-icons/lu";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const SideMainItems = [
     {
@@ -70,7 +70,12 @@ const SidePAckagesItems = [
 ]
 
 const DrawerPrimary = () => {
-    const [activeRoute, setActiveRoute] = useState("dashboard")
+    const [activeRoute, setActiveRoute] = useState("/admin/dashboard")
+    const location = useLocation().pathname
+
+    useEffect(()=>{
+        setActiveRoute(location)
+    },[location])
 
     const handlerRoute = (arg) => {
         setActiveRoute(arg)
@@ -115,12 +120,12 @@ const DrawerPrimary = () => {
                 {SideMainItems.map((value, index) =>
                     <NavLink
                         onClick={
-                            () => handlerRoute(value.id)
+                            () => handlerRoute(value.routeName)
                         }
                         to={value.routeName}
                         key={index}>
                         <div
-                            className={`listItems ${activeRoute === value.id && "sideActive"}`}
+                            className={`listItems ${activeRoute === value.routeName && "sideActive"}`}
 
                         >
                             <div >
@@ -139,9 +144,9 @@ const DrawerPrimary = () => {
                         to={value.routeName}
                         key={index}>
                         <div
-                            className={`listItems ${activeRoute === value.id && "sideActive"}`}
+                            className={`listItems ${activeRoute === value.routeName && "sideActive"}`}
                             onClick={
-                                () => handlerRoute(value.id)
+                                () => handlerRoute(value.routeName)
                             }
                         >
                             <div >

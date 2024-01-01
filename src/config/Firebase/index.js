@@ -1,7 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth, onAuthStateChanged, signInWithEmailAndPassword  } from "firebase/auth";
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword ,signOut } from "firebase/auth";
 import { getStorage, ref, uploadBytes, uploadBytesResumable, getDownloadURL, deleteObject } from "firebase/storage";
 import { getFirestore, collection, addDoc, query, where, onSnapshot,doc, deleteDoc,updateDoc } from "firebase/firestore";
 const firebaseConfig = {
@@ -28,5 +28,5 @@ export {
   getDownloadURL, deleteObject, collection,
   addDoc, db, query, where, onSnapshot,
   doc, deleteDoc,
-  updateDoc
+  updateDoc,signOut
 }

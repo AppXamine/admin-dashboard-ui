@@ -4,8 +4,20 @@ import { AiFillBell, AiFillSetting } from "react-icons/ai"
 import { BiSearchAlt2 } from "react-icons/bi"
 import DrawerPrimary from '../Darwer'
 import { Button } from "antd"
+import { useNavigate } from "react-router-dom"
+import { auth, signOut } from "../../config/Firebase"
 
 function Navbar() {
+    const navigate = useNavigate()
+    const handleLogout = () => {
+        signOut(auth).then(() => {
+            localStorage.clear()
+            navigate("/")
+        }).catch((error) => {
+            console.log("Logout Error =>", error)
+        });
+    }
+
     return (
         <div className='navContainer'>
             <div className='w-full max-w-[350px] h-auto  ml-[10px] flex justify-between items-center' >
@@ -21,7 +33,11 @@ function Navbar() {
                 </div>
             </div>
             <div className='logout'>
-                <Button className="logoutBtn"><p>Log Out</p></Button>
+                <Button
+                    onClick={handleLogout}
+                    className="logoutBtn">
+                    <p>Log Out</p>
+                </Button>
             </div>
         </div>
     )

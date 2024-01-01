@@ -8,19 +8,25 @@
     padding: 10px;
 }
 
+.dividInputs{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
 .firstInput {
     width: 100%;
     height: auto;
-    /* margin: 10px; */
+   
     text-align: center;
     padding: 10px;
-    /* background: red; */
 }
 
 .fromLabel {
     width: 100%;
     height: auto;
-    /* background: green; */
     padding-left: 10px;
     margin-bottom: 2px;
 }
@@ -32,17 +38,19 @@
     letter-spacing: -0.025rem;
 }
 
+.fromLabel span{
+    font-weight: 400;
+    color: #002760;
+}
+
 .formInputStyle {
     width: 100%;
-    max-width: 500px;
-    /* padding: 2px; */
+   
     padding-left: 7px;
     color: #011635;
     font-weight: 600;
     font-size: 13px;
 }
-
-/* background: linear-gradient(#011635, #00337c, #011635); */
 
 .formBtn {
     margin-top: 10px;
@@ -87,7 +95,6 @@
     width: 50%;
     height: auto;
     padding: 15px;
-    /* background-color: rgb(199, 219, 255); */
 }
 
 .packageBlockCard {
@@ -96,7 +103,6 @@
     height: auto;
     padding: 10px;
     padding-left: 30px;
-    /* background-color: blue; */
     display: flex;
     align-items: center;
 }
@@ -108,7 +114,6 @@
     height: auto;
     padding: 20px;
     margin: 10px;
-    /* margin: 0 auto; */
     background-image: url("https://img.freepik.com/free-vector/flat-arabic-pattern-background_79603-1826.jpg?w=996&t=st=1703139828~exp=1703140428~hmac=b04175947430940fe116e231dc2d2a638bdfa2172b7d684846c82542cdd6ae7e");
     background-size: 100%;
     border: 5px solid #473d28;
@@ -134,7 +139,6 @@
 
 .packageHeaderHeading {
     width: 100%;
-    /* background: red; */
 }
 
 .packageSideImage {
@@ -197,7 +201,6 @@
 .packageTable {
     width: 33.4%;
     height: auto;
-    /* background-color: #e8e0d5; */
     border: 2px solid #473d28;
 }
 
@@ -310,7 +313,6 @@
     height: auto;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
 }
 
 .tableItemsValue {
@@ -350,7 +352,6 @@
     width: 100%;
     height: auto;
     padding: 10px;
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'antd';
-import { EditData, deleteData } from '../../config/Functions';
+import { EditData, deleteData } from '../../config/Constant';
 import "./style.css"
 import { Input } from 'antd';
 import { UpdateUpload } from '../AntUploader/Index';
